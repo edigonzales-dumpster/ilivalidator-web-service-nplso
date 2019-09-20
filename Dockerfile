@@ -1,5 +1,5 @@
-#FROM adoptopenjdk/openjdk11:latest
-FROM adoptopenjdk/openjdk8:latest
+FROM adoptopenjdk/openjdk11:latest
+#FROM adoptopenjdk/openjdk8:latest
 
 EXPOSE 8080
 
@@ -14,4 +14,4 @@ RUN chown -R 1001:0 /home/ilivalidator && \
 
 USER 1001
 
-ENTRYPOINT ["java","-cp","app:app/lib/*","ch.so.agi.ilivalidator.IlivalidatorApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","ch.so.agi.ilivalidator.nplso.IlivalidatorApplication"]
