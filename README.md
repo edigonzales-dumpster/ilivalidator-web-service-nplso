@@ -13,6 +13,7 @@ Error: line 412: SO_Nutzungsplanung_20171118.Nutzungsplanung.Grundnutzung: tid 2
 ```
 
 ### Überflüssige OID in Assoziationen
+Ein Fehler von ili2db beim Exportieren von Assoziationen. Siehe [https://github.com/claeis/ili2db/issues/292](https://github.com/claeis/ili2db/issues/292)
 
 Fehlermeldung:
 ```

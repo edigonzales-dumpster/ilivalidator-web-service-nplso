@@ -2,10 +2,15 @@ package ch.so.agi.ilivalidator.nplso.controllers;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.servlet.ServletContext;
 
@@ -107,11 +112,28 @@ public class MainController {
             // Send log file back to client.
             File logFile = new File(logFileName);
             InputStream is = new FileInputStream(logFile);
-
+                        
+//            String result = new String();
+//            try (Stream<String> stream = Files.lines(Paths.get(logFileName))) {
+//                result = stream
+//                        .filter(line -> (
+//                                   line.startsWith("Error:") || 
+//                                   line.startsWith("Info: ...validation") ||
+//                                   line.startsWith("Info: ilivalidator") ||
+//                                   line.startsWith("Info: ili2c") ||
+//                                   line.startsWith("Info: dataFile"))
+//                                )
+//                        //.map(String::toUpperCase)
+//                        .collect(Collectors.joining("\n"));
+//
+//            } catch (IOException e) {
+//                throw new Exception(e);
+//            }            
             return ResponseEntity.ok().header("Content-Type", "text/plain; charset=utf-8")
                     .contentLength(logFile.length())
                     // .contentType(MediaType.parseMediaType("text/plain"))
-                    .body(new InputStreamResource(is));
+                     .body(new InputStreamResource(is));
+//                    .body(result);
         } catch (Exception e) {
             e.printStackTrace();
             log.error(e.getMessage());
