@@ -1,4 +1,5 @@
 # ilivalidator-web-service-nplso
+[![Build Status](https://travis-ci.org/edigonzales/ilivalidator-web-service-nplso.svg?branch=master)](https://travis-ci.org/edigonzales/ilivalidator-web-service-nplso)
 
 ## Zusätzliche Tests
 Bei den zusätzlichen Tests handelt es sich entweder um Verbesserungen im Kern der [Validierungsbibliothek](https://github.com/claeis/ilivalidator) oder um vom Kanton selber definierte Tests, die für das weitere Prozessieren der Daten für die verschiedenen Fragestellungen notwendig sind.
