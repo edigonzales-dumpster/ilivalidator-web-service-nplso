@@ -76,6 +76,7 @@ configurations {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
