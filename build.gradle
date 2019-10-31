@@ -232,7 +232,7 @@ task versionTxt()  {
 Version: $version
 Revision: ${getCheckedOutGitCommitHash()}
 Buildtime: ${new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date())}
-Application-name: ilivalidator-web-service
+Application-name: ilivalidator-web-service-nplso
 """
     }
 }
